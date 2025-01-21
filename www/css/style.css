@@ -1,0 +1,7 @@
+@import url('./global.css');
+@import url('./component/app.css');
+@import url('./component/tabs.css');
+
+body > div#app > .tabs{
+    flex-grow: 1;
+}

@@ -1,0 +1,129 @@
+:root{
+    --bg-color:#eaeaea;
+    --bg-dark-color: #ccc; 
+    --font-color:#232323;
+    --font-nomal-size: 13px;
+    --btn-border-width:1px; 
+    font-size: var(--font-nomal-size);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+
+html, body{padding: 0; margin: 0;height: 100%;width: 100%;}
+div{
+    box-sizing: border-box;scrollbar-width: none;
+}
+a,span{
+    white-space: nowrap;
+}
+a{
+    cursor: pointer;
+    user-select: none;
+}
+
+input,textarea, input:focus, textarea:focus{
+    box-sizing: border-box;
+    border: 1px solid #232323;
+    outline: none;
+}
+button.btn{
+    box-sizing: border-box;
+    outline: none;
+    font-size: var(--font-nomal-size);
+    background-color: #ccc;
+    border: var(--btn-border-width) solid #000;
+    border-left: var(--btn-border-width) solid #fff;
+    border-top: var(--btn-border-width) solid #fff;
+    user-select: none
+}
+button.btn:active{
+    border: var(--btn-border-width) solid #fff;
+    border-left: var(--btn-border-width) solid #000;
+    border-top: var(--btn-border-width) solid #000;
+    user-select: none;
+}
+
+.flex{
+    display: flex;
+}
+.flex-row{
+    flex-direction: row;
+}
+.flex-column{
+    flex-direction: column;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.flex-center{
+    align-items: center;
+    justify-content: center;
+}
+.flex-start{
+    align-items: flex-start;
+}
+.flex-around{
+    justify-content: space-around;
+}
+.flex-between{
+    justify-content: space-between;
+}
+.flex-evenly{
+    justify-content: space-evenly;
+}
+.align-items-center{
+    align-items: center
+}
+.justify-content-center{
+    justify-content: center;
+}
+.flex-basis-1{
+    flex-basis: 1;
+}
+.flex-basis-0{
+    flex-basis: 0;
+}
+.flex-shrink-0{
+    flex-shrink: 0;
+}
+.flex-grow-1{
+    flex-grow: 1;
+}
+.gap-5{
+    gap: 5px;
+}
+.pad-5{
+    padding: 5px;
+}
+.overflow-y-scroll{
+    overflow-y: scroll;
+}
+.overflow-y-hidden{
+    overflow-y: hidden;
+}
+.overflow-y-auto{
+    overflow-y: auto;
+}
+.position-absolute{
+    position: absolute;
+}
+.h-pt-100{
+    height: 100%;
+}
+.w-pt-100{
+    width: 100%;
+}
+
+.display-none{
+    display: none;
+}
+.user-select-none{
+    user-select: none
+}
+.resize-none{
+    resize: none
+}
+.dark{
+    background-color: #232323;
+    color: #fff;
+}

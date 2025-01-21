@@ -1,0 +1,119 @@
+.tabs{
+    display: flex;
+    flex-direction: column;
+    --nav-height:25px; 
+    --border-width:1px; 
+    background-color: var(--bg-color);
+}
+
+.tabs > .nav{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    flex-shrink: 1;
+    overflow: hidden;
+    max-height: var(--nav-height);
+    height: var(--nav-height);
+    white-space: nowrap;
+    background-color: var(--bg-dark-color);
+}
+.tabs > .nav > .link-list{
+    flex-grow: 1;
+    display: flex;
+    overflow-y: scroll;
+}
+.tabs > .nav > .link-list > .link{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px;
+    gap: 5px;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+}
+.tabs > .nav > .link-list > .link.select{
+    background-color: var(--bg-color);
+}
+
+
+.tabs > .nav > .link-list > .link > a{
+    height: calc(var(--nav-height) - var(--border-width) * 2 - 9px);
+    width: calc(var(--nav-height) - var(--border-width) * 2 - 9px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: var(--btn-border-width) solid #fff;
+    border-bottom: var(--btn-border-width) solid #000;
+    border-right: var(--btn-border-width) solid #000;
+}
+.tabs > .nav > .link-list > .link > a:active{
+    border: var(--btn-border-width) solid #000;
+    border-bottom: var(--btn-border-width) solid #fff;
+    border-right: var(--btn-border-width) solid #fff;
+}
+
+.tabs > .nav > .link-list > .link > a > svg{
+    max-width: 60%;
+    max-height: 60%;
+}
+.tabs > .nav > .link-controler{
+    width: calc(var(--nav-height) * 2);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.tabs > .nav > .link-controler > a{
+    height: calc(var(--nav-height) - var(--border-width) * 2 - 9px);
+    width: calc(var(--nav-height) - var(--border-width) * 2 - 9px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: var(--btn-border-width) solid #fff;
+    border-bottom: var(--btn-border-width) solid #000;
+    border-right: var(--btn-border-width) solid #000;
+}
+.tabs > .nav > .link-controler > a:active{
+    border: var(--btn-border-width) solid #000;
+    border-bottom: var(--btn-border-width) solid #fff;
+    border-right: var(--btn-border-width) solid #fff;
+}
+
+.tabs > .nav > .link-controler > a > svg{
+    max-width: 60%;
+    max-height: 60%;
+}
+
+.tabs > .content{
+    flex-grow: 1;
+    flex-basis: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    height: calc( 100% - var(--nav-height));
+    top: var(--nav-height);
+}
+
+.tabs > .content >.item{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0); 
+    transform: translate(-99999px, -99999px);
+    z-index: -9999;
+    display: flex;
+    flex-direction: column;
+}
+
+.tabs > .content >.item.select{
+    transform: none;
+    visibility: visible;
+    z-index: auto;
+}
